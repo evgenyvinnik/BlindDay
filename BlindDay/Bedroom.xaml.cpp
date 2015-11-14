@@ -115,7 +115,7 @@ void BlindDay::Bedroom::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml:
 void BlindDay::Bedroom::button1_PointerEntered_1(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "This is something hard. Must be my wall";
+	String^ text = "This is something hard. This must be my wall";
 
 	try
 	{
@@ -480,8 +480,6 @@ void BlindDay::Bedroom::button3_PointerEntered(Platform::Object^ sender, Windows
 			hr = ex->HResult;
 
 		}
-
-		rightslipper++;
 	}
 }
 
@@ -510,8 +508,6 @@ void BlindDay::Bedroom::button4_PointerEntered(Platform::Object^ sender, Windows
 			hr = ex->HResult;
 
 		}
-
-		leftslipper++;
 	}
 }
 
@@ -540,8 +536,6 @@ void BlindDay::Bedroom::button5_PointerEntered(Platform::Object^ sender, Windows
 			hr = ex->HResult;
 
 		}
-
-		tshirt++;
 	}
 }
 
@@ -570,8 +564,6 @@ void BlindDay::Bedroom::button6_PointerEntered(Platform::Object^ sender, Windows
 			hr = ex->HResult;
 
 		}
-
-		pants++;
 	}
 }
 
@@ -596,5 +588,129 @@ void BlindDay::Bedroom::button7_PointerEntered(Platform::Object^ sender, Windows
 	{
 		hr = ex->HResult;
 
+	}
+}
+
+
+void BlindDay::Bedroom::button3_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	if (rightslipper == 0)
+	{
+
+		HRESULT hr = S_OK;
+		String^ text = "I'll put on my right slipper.";
+
+		try
+		{
+			auto speakTask = this->GetSpeechStreamTask(text);
+			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+			{
+				// start this audio stream playing
+				this->media->SetSource(speechStream, speechStream->ContentType);
+				this->media->AutoPlay = true;
+				this->media->Play();
+
+			});
+		}
+		catch (Exception ^ex)
+		{
+			hr = ex->HResult;
+
+		}
+
+		rightslipper++;
+	}
+}
+
+
+void BlindDay::Bedroom::button4_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	if (leftslipper == 0)
+	{
+
+		HRESULT hr = S_OK;
+		String^ text = "I'll put on my left slipper.";
+
+		try
+		{
+			auto speakTask = this->GetSpeechStreamTask(text);
+			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+			{
+				// start this audio stream playing
+				this->media->SetSource(speechStream, speechStream->ContentType);
+				this->media->AutoPlay = true;
+				this->media->Play();
+
+			});
+		}
+		catch (Exception ^ex)
+		{
+			hr = ex->HResult;
+
+		}
+
+		leftslipper++;
+	}
+}
+
+
+void BlindDay::Bedroom::button5_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	if (tshirt == 0)
+	{
+
+		HRESULT hr = S_OK;
+		String^ text = "I'll put on my tshirt.";
+
+		try
+		{
+			auto speakTask = this->GetSpeechStreamTask(text);
+			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+			{
+				// start this audio stream playing
+				this->media->SetSource(speechStream, speechStream->ContentType);
+				this->media->AutoPlay = true;
+				this->media->Play();
+
+			});
+		}
+		catch (Exception ^ex)
+		{
+			hr = ex->HResult;
+
+		}
+
+		tshirt++;
+	}
+}
+
+
+void BlindDay::Bedroom::button6_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	if (pants == 0)
+	{
+
+		HRESULT hr = S_OK;
+		String^ text = "I'll put on my pants.";
+
+		try
+		{
+			auto speakTask = this->GetSpeechStreamTask(text);
+			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+			{
+				// start this audio stream playing
+				this->media->SetSource(speechStream, speechStream->ContentType);
+				this->media->AutoPlay = true;
+				this->media->Play();
+
+			});
+		}
+		catch (Exception ^ex)
+		{
+			hr = ex->HResult;
+
+		}
+
+		pants++;
 	}
 }
