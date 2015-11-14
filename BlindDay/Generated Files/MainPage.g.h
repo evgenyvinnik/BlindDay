@@ -7,6 +7,16 @@
 //------------------------------------------------------------------------------
 
 
+namespace Windows {
+    namespace UI {
+        namespace Xaml {
+            namespace Controls {
+                ref class Button;
+                ref class MediaElement;
+            }
+        }
+    }
+}
 
 namespace BlindDay
 {
@@ -23,6 +33,9 @@ namespace BlindDay
     private:
         bool _contentLoaded;
     
+        private: ::Windows::UI::Xaml::Controls::Button^ button;
+        private: ::Windows::UI::Xaml::Controls::Button^ button1;
+        private: ::Windows::UI::Xaml::Controls::MediaElement^ media;
     };
 }
 
