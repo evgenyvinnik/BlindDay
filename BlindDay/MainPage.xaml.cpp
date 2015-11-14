@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "MainPage.xaml.h"
+#include "Bedroom.xaml.h"
 
 using namespace BlindDay;
 
@@ -48,33 +49,12 @@ task<SpeechSynthesisStream ^> BlindDay::MainPage::GetSpeechStreamTask(String ^ t
 
 void BlindDay::MainPage::button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	HRESULT hr = S_OK;
-	String^ text = "Wlecome to a blind day adventure";	
 
-	try
-	{
-		auto speakTask = this->GetSpeechStreamTask(text);
-		speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
-		{
-			// start this audio stream playing
-			this->media->SetSource(speechStream, speechStream->ContentType);
-			this->media->AutoPlay = true;
-			this->media->Play();
-
-		});
-	}
-	catch (Exception ^ex)
-	{
-		hr = ex->HResult;
-
-	}
 }
-
-
 
 void BlindDay::MainPage::button1_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-
+	this->Frame->Navigate(Bedroom::typeid);
 }
 
 
@@ -143,7 +123,7 @@ void BlindDay::MainPage::button2_PointerEntered(Platform::Object^ sender, Window
 
 void BlindDay::MainPage::button2_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	return;
+	App::Current->Exit();
 }
 
 
