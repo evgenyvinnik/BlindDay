@@ -49,7 +49,7 @@ task<SpeechSynthesisStream ^> BlindDay::MainPage::GetSpeechStreamTask(String ^ t
 void BlindDay::MainPage::button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "Hello";	
+	String^ text = "Wlecome to a blind day adventure";	
 
 	try
 	{
@@ -87,5 +87,86 @@ void BlindDay::MainPage::media_CurrentStateChanged(Platform::Object^ sender, Win
 		element->CurrentState == MediaElementState::Paused)
 	{
 		//this->btnSpeak->IsEnabled = true;
+	}
+}
+
+
+void BlindDay::MainPage::button1_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
+{
+	HRESULT hr = S_OK;
+	String^ text = "Start";
+
+	try
+	{
+		auto speakTask = this->GetSpeechStreamTask(text);
+		speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+		{
+			// start this audio stream playing
+			this->media->SetSource(speechStream, speechStream->ContentType);
+			this->media->AutoPlay = true;
+			this->media->Play();
+
+		});
+	}
+	catch (Exception ^ex)
+	{
+		hr = ex->HResult;
+
+	}
+}
+
+
+void BlindDay::MainPage::button2_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
+{
+	HRESULT hr = S_OK;
+	String^ text = "Exit";
+
+	try
+	{
+		auto speakTask = this->GetSpeechStreamTask(text);
+		speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+		{
+			// start this audio stream playing
+			this->media->SetSource(speechStream, speechStream->ContentType);
+			this->media->AutoPlay = true;
+			this->media->Play();
+
+		});
+	}
+	catch (Exception ^ex)
+	{
+		hr = ex->HResult;
+
+	}
+}
+
+
+void BlindDay::MainPage::button2_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	return;
+}
+
+
+void BlindDay::MainPage::button_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
+{
+	HRESULT hr = S_OK;
+	String^ text = "The title of our game is called A Blind Day";
+
+	try
+	{
+		auto speakTask = this->GetSpeechStreamTask(text);
+		speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+		{
+			// start this audio stream playing
+			this->media->SetSource(speechStream, speechStream->ContentType);
+			this->media->AutoPlay = true;
+			this->media->Play();
+
+		});
+	}
+	catch (Exception ^ex)
+	{
+		hr = ex->HResult;
+
 	}
 }
