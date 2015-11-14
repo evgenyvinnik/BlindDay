@@ -129,6 +129,7 @@ DocProject/Help/html
 
 #BlindDay generate files
 "BlindDay/Generated Files/"
+BlindDay/Generated\ Files
 
 # Click-Once directory
 publish/
