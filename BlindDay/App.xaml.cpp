@@ -29,6 +29,7 @@ using namespace Windows::UI::Xaml::Navigation;
 App::App()
 {
 	InitializeComponent();
+	Windows::UI::ViewManagement::ApplicationView::PreferredLaunchWindowingMode = Windows::UI::ViewManagement::ApplicationViewWindowingMode::FullScreen;
 	Suspending += ref new SuspendingEventHandler(this, &App::OnSuspending);
 }
 
@@ -40,7 +41,7 @@ App::App()
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e)
 {
 
-#if _DEBUG
+/*#if _DEBUG
 		// Show graphics profiling information while debugging.
 		if (IsDebuggerPresent())
 		{
@@ -48,7 +49,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 			 DebugSettings->EnableFrameRateCounter = true;
 		}
 #endif
-
+*/
 	auto rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
 
 	// Do not repeat app initialization when the Window already has content,
