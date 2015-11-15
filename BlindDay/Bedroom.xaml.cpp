@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "Bedroom.xaml.h"
+#include "Bathroom.xaml.h"
 
 using namespace BlindDay;
 
@@ -29,8 +30,8 @@ using namespace Windows::Media::SpeechSynthesis;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-int leftslipper = 0;
-int rightslipper = 0;
+int leftsock = 0;
+int rightsock = 0;
 int tshirt = 0;
 int pants = 0;
 
@@ -58,14 +59,21 @@ void BlindDay::Bedroom::media_CurrentStateChanged(Platform::Object^ sender, Wind
 	if (element->CurrentState == MediaElementState::Stopped ||
 		element->CurrentState == MediaElementState::Paused)
 	{
-		//this->btnSpeak->IsEnabled = true;
+		this->button->IsEnabled = true;
+		this->button1->IsEnabled = true;
+		this->button2->IsEnabled = true;
+		this->button3->IsEnabled = true;
+		this->button4->IsEnabled = true;
+		this->button5->IsEnabled = true;
+		this->button6->IsEnabled = true;
+		this->button7->IsEnabled = true;
 	}
 }
 
 void BlindDay::Bedroom::button_PointerEntered_1(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "My bed is such a mess";
+	String^ text = "That's my bed. It's probably a mess";
 
 	try
 	{
@@ -90,7 +98,8 @@ void BlindDay::Bedroom::button_PointerEntered_1(Platform::Object^ sender, Window
 void BlindDay::Bedroom::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "Huh! I can't see a thing! Jeez! What happened to me? Oh, right! Doctor said something about temporary blindness after lasik surgery!";
+	String^ text = "Oh, no!! I can't see a thing! Jeez! What happened to me?"
+		" Right! Doctor said something about temporary blindness after lasik surgery! Ok, let's dress up and take shower!";
 
 	try
 	{
@@ -115,7 +124,7 @@ void BlindDay::Bedroom::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml:
 void BlindDay::Bedroom::button1_PointerEntered_1(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "This is something hard. This must be my wall";
+	String^ text = "This is something hard. This must be a wall";
 
 	try
 	{
@@ -139,10 +148,10 @@ void BlindDay::Bedroom::button1_PointerEntered_1(Platform::Object^ sender, Windo
 
 void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
-	if (rightslipper == 0 && leftslipper == 0 && tshirt == 0 && pants == 0)
+	if (rightsock == 0 && leftsock == 0 && tshirt == 0 && pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper, right slipper, t-shirt, and pants.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock, right sock, t-shirt, and pants.";
 
 		try
 		{
@@ -163,10 +172,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 1 && leftslipper == 0 && tshirt == 0 && pants == 0)
+	else if (rightsock == 1 && leftsock == 0 && tshirt == 0 && pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper, t-shirt, and pants.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock, t-shirt, and pants.";
 
 		try
 		{
@@ -187,10 +196,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 0 && leftslipper == 1 && tshirt == 0 && pants == 0)
+	else if (rightsock == 0 && leftsock == 1 && tshirt == 0 && pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my right slipper, t-shirt, and pants.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my right sock, t-shirt, and pants.";
 
 		try
 		{
@@ -211,10 +220,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 0 && leftslipper == 0 && tshirt == 1 && pants == 0)
+	else if (rightsock == 0 && leftsock == 0 && tshirt == 1 && pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper, right slipper, and pants.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock, right sock, and pants.";
 
 		try
 		{
@@ -235,10 +244,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 0 && leftslipper == 0 && tshirt == 0 && pants == 1)
+	else if (rightsock == 0 && leftsock == 0 && tshirt == 0 && pants == 1)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper, right slipper, and t-shirt";
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock, right sock, and t-shirt";
 
 		try
 		{
@@ -259,7 +268,7 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 1 && leftslipper == 1 && tshirt == 0 && pants == 0)
+	else if (rightsock == 1 && leftsock == 1 && tshirt == 0 && pants == 0)
 	{
 		HRESULT hr = S_OK;
 		String^ text = "Oh, I should go take a shower. But first I need to find my t-shirt and pants.";
@@ -282,10 +291,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 
 		}
 	}
-	else if (rightslipper == 0 && leftslipper == 1 && tshirt == 1 && pants == 0)
+	else if (rightsock == 0 && leftsock == 1 && tshirt == 1 && pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my right slipper and pants.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my right sock and pants.";
 
 		try
 		{
@@ -305,34 +314,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 
 		}
 	}
-	else if (rightslipper == 0 && leftslipper == 0 && tshirt == 1 && pants == 1)
+	else if (rightsock == 0 && leftsock == 0 && tshirt == 1 && pants == 1)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper and right slipper.";
-
-		try
-		{
-			auto speakTask = this->GetSpeechStreamTask(text);
-			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
-			{
-				// start this audio stream playing
-				this->media->SetSource(speechStream, speechStream->ContentType);
-				this->media->AutoPlay = true;
-				this->media->Play();
-
-			});
-		}
-		catch (Exception ^ex)
-		{
-			hr = ex->HResult;
-
-		}
-	}
-
-	else if (rightslipper == 1 && leftslipper == 0 && tshirt == 0 && pants == 1)
-	{
-		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper and pants.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock and right sock.";
 
 		try
 		{
@@ -353,7 +338,31 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 1 && leftslipper == 1 && tshirt == 1 && pants == 0)
+	else if (rightsock == 1 && leftsock == 0 && tshirt == 0 && pants == 1)
+	{
+		HRESULT hr = S_OK;
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock and pants.";
+
+		try
+		{
+			auto speakTask = this->GetSpeechStreamTask(text);
+			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+			{
+				// start this audio stream playing
+				this->media->SetSource(speechStream, speechStream->ContentType);
+				this->media->AutoPlay = true;
+				this->media->Play();
+
+			});
+		}
+		catch (Exception ^ex)
+		{
+			hr = ex->HResult;
+
+		}
+	}
+
+	else if (rightsock == 1 && leftsock == 1 && tshirt == 1 && pants == 0)
 	{
 		HRESULT hr = S_OK;
 		String^ text = "Oh, I should go take a shower. But first I need to find my pants.";
@@ -377,10 +386,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 0 && leftslipper == 1 && tshirt == 1 && pants == 1)
+	else if (rightsock == 0 && leftsock == 1 && tshirt == 1 && pants == 1)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my right slipper.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my right sock.";
 
 		try
 		{
@@ -401,10 +410,10 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 1 && leftslipper == 0 && tshirt == 1 && pants == 1)
+	else if (rightsock == 1 && leftsock == 0 && tshirt == 1 && pants == 1)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oh, I should go take a shower. But first I need to find my left slipper.";
+		String^ text = "Oh, I should go take a shower. But first I need to find my left sock.";
 
 		try
 		{
@@ -425,7 +434,7 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 		}
 	}
 
-	else if (rightslipper == 1 && leftslipper == 1 && tshirt == 0 && pants == 1)
+	else if (rightsock == 1 && leftsock == 1 && tshirt == 0 && pants == 1)
 	{
 		HRESULT hr = S_OK;
 		String^ text = "Oh, I should go take a shower. But first I need to find my t-shirt.";
@@ -451,17 +460,17 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 
 	else
 	{
-		//this is where we will nagivate to the washroom
+		this->Frame->Navigate(Bathroom::typeid);
 	}
 }
 
 
 void BlindDay::Bedroom::button3_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
-	if (rightslipper == 0)
+	if (rightsock == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Ahh. There is my right slipper.";
+		String^ text = "Nice! There is my right sock.";
 
 		try
 		{
@@ -486,10 +495,10 @@ void BlindDay::Bedroom::button3_PointerEntered(Platform::Object^ sender, Windows
 
 void BlindDay::Bedroom::button4_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
-	if (leftslipper == 0)
+	if (leftsock == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Ahh. There is my left slipper.";
+		String^ text = "Ok! There is my left sock.";
 
 		try
 		{
@@ -517,7 +526,7 @@ void BlindDay::Bedroom::button5_PointerEntered(Platform::Object^ sender, Windows
 	if (tshirt == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Ahh. There is my t-shirt.";
+		String^ text = "Soft. Smelly. This is my t-shirt.";
 
 		try
 		{
@@ -545,7 +554,7 @@ void BlindDay::Bedroom::button6_PointerEntered(Platform::Object^ sender, Windows
 	if (pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Ahh. There is my pants.";
+		String^ text = "Long. Two trunks. There is my pants.";
 
 		try
 		{
@@ -570,7 +579,7 @@ void BlindDay::Bedroom::button6_PointerEntered(Platform::Object^ sender, Windows
 void BlindDay::Bedroom::button7_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "This is where my window is I think.";
+	String^ text = "This is where my window is I think. You know, I can't see a thing!";
 
 	try
 	{
@@ -594,11 +603,11 @@ void BlindDay::Bedroom::button7_PointerEntered(Platform::Object^ sender, Windows
 
 void BlindDay::Bedroom::button3_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	if (rightslipper == 0)
+	if (rightsock == 0)
 	{
 
 		HRESULT hr = S_OK;
-		String^ text = "I'll put on my right slipper.";
+		String^ text = "Ok, right sock is on my right sock.";
 
 		try
 		{
@@ -618,18 +627,18 @@ void BlindDay::Bedroom::button3_Click(Platform::Object^ sender, Windows::UI::Xam
 
 		}
 
-		rightslipper++;
+		rightsock++;
 	}
 }
 
 
 void BlindDay::Bedroom::button4_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	if (leftslipper == 0)
+	if (leftsock == 0)
 	{
 
 		HRESULT hr = S_OK;
-		String^ text = "I'll put on my left slipper.";
+		String^ text = "I'll put on my left sock.";
 
 		try
 		{
@@ -649,7 +658,7 @@ void BlindDay::Bedroom::button4_Click(Platform::Object^ sender, Windows::UI::Xam
 
 		}
 
-		leftslipper++;
+		leftsock++;
 	}
 }
 
