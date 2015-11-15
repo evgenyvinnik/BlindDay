@@ -244,6 +244,26 @@ void BlindDay::Bathroom::button5_PointerEntered(Platform::Object^ sender, Window
 			hr = ex->HResult;
 		}
 	}
+	else
+	{
+		HRESULT hr = S_OK;
+		String^ text = "Find toothpaste, toothbrush, hot water tap, cold water tap, and come back to the sink.";
+		try
+		{
+			auto speakTask = this->GetSpeechStreamTask(text);
+			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+			{
+				// start this audio stream playing
+				this->media->SetSource(speechStream, speechStream->ContentType);
+				this->media->AutoPlay = true;
+				this->media->Play();
+			});
+		}
+		catch (Exception ^ex)
+		{
+			hr = ex->HResult;
+		}
+	}
 }
 
 
