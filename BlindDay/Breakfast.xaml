@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded">
+        <MediaElement x:Name="MediaPlayer" IsLooping="True" Source="ms-appx:///Assets/fridge.mp3"
+                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" />
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
         <Button x:Name="button" Content="Freezer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="236" Width="366" PointerEntered="button_PointerEntered" Click="button_Click"/>
         <Button x:Name="button1" Content="Toaster" HorizontalAlignment="Left" Margin="452,289,0,0" VerticalAlignment="Top" Height="128" Width="199" PointerEntered="button1_PointerEntered" Click="button1_Click"/>

@@ -8,6 +8,8 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="#FF666666">
+        <MediaElement x:Name="MediaPlayer" IsLooping="True" Source="ms-appx:///Assets/bird.mp3"
+                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" />
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
 
         <Button x:Name="button" Content="BED" HorizontalAlignment="Left" Margin="0,487,0,-10" VerticalAlignment="Top" Height="243" Width="621" RenderTransformOrigin="0.941,0.305" PointerEntered="button_PointerEntered_1" IsEnabled="false" Opacity="0"/>
