@@ -62,10 +62,7 @@ void BlindDay::Bathroom::media_CurrentStateChanged(Platform::Object^ sender, Win
 {
 	MediaElement ^element = (MediaElement ^)sender;
 
-	if (element->CurrentState == MediaElementState::Stopped ||
-		element->CurrentState == MediaElementState::Paused)
-	{
-		MediaElement ^element = (MediaElement ^)sender;
+
 
 		if (element->CurrentState == MediaElementState::Stopped ||
 			element->CurrentState == MediaElementState::Paused)
@@ -79,7 +76,7 @@ void BlindDay::Bathroom::media_CurrentStateChanged(Platform::Object^ sender, Win
 			this->button6->IsEnabled = true;
 			this->button7->IsEnabled = true;
 		}
-	}
+
 }
 void BlindDay::Bathroom::button_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
@@ -974,3 +971,26 @@ void BlindDay::Bathroom::button7_Click(Platform::Object^ sender, Windows::UI::Xa
 	}
 }
 
+void BlindDay::Bathroom::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	HRESULT hr = S_OK;
+	String^ text = "Time to brush my teeth, it is a brand new day!";
+
+	try
+	{
+		auto speakTask = this->GetSpeechStreamTask(text);
+		speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+		{
+			// start this audio stream playing
+			this->media->SetSource(speechStream, speechStream->ContentType);
+			this->media->AutoPlay = true;
+			this->media->Play();
+
+		});
+	}
+	catch (Exception ^ex)
+	{
+		hr = ex->HResult;
+
+	}
+}

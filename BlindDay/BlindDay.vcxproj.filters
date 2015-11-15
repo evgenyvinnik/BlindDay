@@ -64,4 +64,18 @@
     <Page Include="Bathroom.xaml" />
     <Page Include="TheEnd.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\bathroom.wav">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\bird.wav">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\fridge.wav">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\intro.mp3">
+      <Filter>Assets</Filter>
+    </Media>
+  </ItemGroup>
 </Project>
