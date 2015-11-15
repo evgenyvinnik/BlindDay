@@ -18,6 +18,7 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Bedroom.xaml.cpp" />
     <ClCompile Include="Breakfast.xaml.cpp" />
+    <ClCompile Include="Bathroom.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -25,6 +26,7 @@
     <ClInclude Include="MainPage.xaml.h" />
     <ClInclude Include="Bedroom.xaml.h" />
     <ClInclude Include="Breakfast.xaml.h" />
+    <ClInclude Include="Bathroom.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -60,5 +62,19 @@
     <Page Include="Bedroom.xaml" />
     <Page Include="Breakfast.xaml" />
     <Page Include="Bathroom.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\bathroom.wav">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\bird.wav">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\fridge.wav">
+      <Filter>Assets</Filter>
+    </Media>
+    <Media Include="Assets\intro.mp3">
+      <Filter>Assets</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -61,7 +61,15 @@ void BlindDay::Breakfast::media_CurrentStateChanged(Platform::Object^ sender, Wi
 	if (element->CurrentState == MediaElementState::Stopped ||
 		element->CurrentState == MediaElementState::Paused)
 	{
-		//this->btnSpeak->IsEnabled = true;
+		this->button->IsEnabled = true;
+		this->button1->IsEnabled = true;
+		this->button2->IsEnabled = true;
+		this->button3->IsEnabled = true;
+		this->button4->IsEnabled = true;
+		this->button5->IsEnabled = true;
+		this->button6->IsEnabled = true;
+		this->button7->IsEnabled = true;
+		this->button8->IsEnabled = true;
 	}
 }
 

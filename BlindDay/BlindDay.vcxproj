@@ -209,6 +209,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\bathroom.wav" />
+    <Media Include="Assets\bird.wav" />
+    <Media Include="Assets\fridge.wav" />
+    <Media Include="Assets\intro.mp3" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
