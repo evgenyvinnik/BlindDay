@@ -65,7 +65,20 @@ void BlindDay::Bathroom::media_CurrentStateChanged(Platform::Object^ sender, Win
 	if (element->CurrentState == MediaElementState::Stopped ||
 		element->CurrentState == MediaElementState::Paused)
 	{
-		//this->btnSpeak->IsEnabled = true;
+		MediaElement ^element = (MediaElement ^)sender;
+
+		if (element->CurrentState == MediaElementState::Stopped ||
+			element->CurrentState == MediaElementState::Paused)
+		{
+			this->button->IsEnabled = true;
+			this->button1->IsEnabled = true;
+			this->button2->IsEnabled = true;
+			this->button3->IsEnabled = true;
+			this->button4->IsEnabled = true;
+			this->button5->IsEnabled = true;
+			this->button6->IsEnabled = true;
+			this->button7->IsEnabled = true;
+		}
 	}
 }
 void BlindDay::Bathroom::button_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
@@ -101,7 +114,7 @@ void BlindDay::Bathroom::button1_PointerEntered(Platform::Object^ sender, Window
 	if (Toothbrush == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Toothbrush, toothepaste, and water is all I need in here";
+		String^ text = "Toothbrush, toothepaste, and water at the sink is all I need in here";
 
 		try
 		{
@@ -156,7 +169,7 @@ void BlindDay::Bathroom::button3_PointerEntered(Platform::Object^ sender, Window
 	if (Hot_tap == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "One of the water tap is here, the otherone should close by";
+		String^ text = "One of the water tap is here, the other one should close by";
 
 		try
 		{
@@ -211,7 +224,7 @@ void BlindDay::Bathroom::button5_PointerEntered(Platform::Object^ sender, Window
 	if (Sink == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Time to brush teeth with the things I found at the sink";
+		String^ text = "I need to brush my teeth, I need toothpaste, toothbrush, hot water tap, and cold water tap.";
 		try
 		{
 			auto speakTask = this->GetSpeechStreamTask(text);
@@ -709,7 +722,7 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 	String^ third_touch = "I found nothing useful in the sink.";
 	if (Sink == 0)
 	{
-		if (Toothpaste >= 1 && Toothbrush >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+		if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
 		{
 			this->Frame->Navigate(Breakfast::typeid);
 		}
@@ -737,10 +750,11 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 
 	else if (Sink == 1)
 	{
-		if (Toothpaste >= 1 && Toothbrush >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+		if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1)
 		{
 			this->Frame->Navigate(Breakfast::typeid);
 		}
+
 		HRESULT hr = S_OK;
 
 		try
@@ -766,10 +780,11 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 
 	else if (Sink >= 2)
 	{
-		 if (Toothpaste >= 1 && Toothbrush >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
-		{
-			this->Frame->Navigate(Breakfast::typeid);
+		 if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+	    {
+		    this->Frame->Navigate(Breakfast::typeid);
 		}
+
 		HRESULT hr = S_OK;
 
 		try
