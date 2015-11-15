@@ -99,7 +99,7 @@ void BlindDay::Bedroom::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml:
 {
 	HRESULT hr = S_OK;
 	String^ text = "Oh, no!! I can't see a thing! Jeez! What happened to me?"
-		" Right! Doctor said something about temporary blindness after lasik surgery! Ok, let's dress up and take shower!";
+		" Right! Doctor said something about temporary blindness after lasik surgery! Ok, let's dress up and take a shower!";
 
 	try
 	{
@@ -607,7 +607,7 @@ void BlindDay::Bedroom::button3_Click(Platform::Object^ sender, Windows::UI::Xam
 	{
 
 		HRESULT hr = S_OK;
-		String^ text = "Ok, right sock is on my right sock.";
+		String^ text = "Ok, right sock is on my right foot.";
 
 		try
 		{

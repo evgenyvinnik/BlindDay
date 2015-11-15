@@ -709,6 +709,10 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 	String^ third_touch = "I found nothing useful in the sink.";
 	if (Sink == 0)
 	{
+		if (Toothpaste >= 1 && Toothbrush >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+		{
+			this->Frame->Navigate(Breakfast::typeid);
+		}
 		HRESULT hr = S_OK;
 		try
 		{
@@ -733,7 +737,10 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 
 	else if (Sink == 1)
 	{
-
+		if (Toothpaste >= 1 && Toothbrush >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+		{
+			this->Frame->Navigate(Breakfast::typeid);
+		}
 		HRESULT hr = S_OK;
 
 		try
@@ -759,7 +766,10 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 
 	else if (Sink >= 2)
 	{
-
+		 if (Toothpaste >= 1 && Toothbrush >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+		{
+			this->Frame->Navigate(Breakfast::typeid);
+		}
 		HRESULT hr = S_OK;
 
 		try
@@ -781,10 +791,6 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 		}
 
 		Sink++;
-	}
-	else if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
-	{
-		this->Frame->Navigate(Breakfast::typeid);
 	}
 }
 
