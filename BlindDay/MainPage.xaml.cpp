@@ -74,7 +74,7 @@ void BlindDay::MainPage::media_CurrentStateChanged(Platform::Object^ sender, Win
 void BlindDay::MainPage::button1_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "Start";
+	String^ text = "This is a button to start adventure! Click it to proceed!";
 
 	try
 	{
@@ -99,7 +99,7 @@ void BlindDay::MainPage::button1_PointerEntered(Platform::Object^ sender, Window
 void BlindDay::MainPage::button2_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "Exit";
+	String^ text = "That's an exit button! Click it to close the app";
 
 	try
 	{
@@ -130,7 +130,33 @@ void BlindDay::MainPage::button2_Click(Platform::Object^ sender, Windows::UI::Xa
 void BlindDay::MainPage::button_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "The title of our game is called A Blind Day";
+	String^ text = "Ok! So this is where the title of our game is located. It says \"A Blind Day\"";
+
+	try
+	{
+		auto speakTask = this->GetSpeechStreamTask(text);
+		speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
+		{
+			// start this audio stream playing
+			this->media->SetSource(speechStream, speechStream->ContentType);
+			this->media->AutoPlay = true;
+			this->media->Play();
+
+		});
+	}
+	catch (Exception ^ex)
+	{
+		hr = ex->HResult;
+
+	}
+}
+
+
+void BlindDay::MainPage::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	HRESULT hr = S_OK;
+	String^ text = "Welcome to our game \"A Blind Day\"! As you can see it has no graphics! It's done on purpose!"
+                    " We simulate the senses of a blind person! Move the mouse around to discover!";
 
 	try
 	{
