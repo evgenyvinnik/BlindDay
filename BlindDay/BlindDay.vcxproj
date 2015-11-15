@@ -137,9 +137,6 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Bathroom.xaml.h">
-      <DependentUpon>Bathroom.xaml</DependentUpon>
-    </ClInclude>
     <ClInclude Include="Bedroom.xaml.h">
       <DependentUpon>Bedroom.xaml</DependentUpon>
     </ClInclude>
@@ -158,7 +155,6 @@
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Bathroom.xaml" />
     <Page Include="Bedroom.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -187,9 +183,6 @@
   <ItemGroup>
     <ClCompile Include="App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
-    </ClCompile>
-    <ClCompile Include="Bathroom.xaml.cpp">
-      <DependentUpon>Bathroom.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="Bedroom.xaml.cpp">
       <DependentUpon>Bedroom.xaml</DependentUpon>

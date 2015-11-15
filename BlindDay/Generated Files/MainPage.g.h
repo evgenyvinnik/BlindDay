@@ -35,6 +35,7 @@ namespace BlindDay
     
         private: ::Windows::UI::Xaml::Controls::Button^ button;
         private: ::Windows::UI::Xaml::Controls::Button^ button1;
+        private: ::Windows::UI::Xaml::Controls::Button^ button2;
         private: ::Windows::UI::Xaml::Controls::MediaElement^ media;
     };
 }
