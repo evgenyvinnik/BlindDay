@@ -7,17 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <MediaElement x:Name="MediaPlayer" IsLooping="True" Source="ms-appx:///Assets/bathroom.mp3"
-                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" />
-        <Button x:Name="button" Content="Toothpaste" HorizontalAlignment="Left" VerticalAlignment="Top" Height="296" RenderTransformOrigin="1.508,1.264" Margin="420,336,0,0" Width="112" PointerEntered="button_PointerEntered" Click="button_Click"/>
-        <Button x:Name="button1" Content="Toothbrush" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="615,336,0,0" Height="296" Width="95" PointerEntered="button1_PointerEntered" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Razor" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.523,4.406" Margin="420,150,0,0" Height="110" Width="302" PointerEntered="button2_PointerEntered" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Hot Tap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="846,178,0,0" Height="125" Width="143" PointerEntered="button3_PointerEntered" Click="button3_Click"/>
-        <Button x:Name="button4" Content="Cold Tap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1092,178,0,0" Height="125" Width="146" PointerEntered="button4_PointerEntered" Click="button4_Click"/>
-        <Button x:Name="button5" Content="Sink" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="900,379,0,0" Height="209" Width="260" PointerEntered="button5_PointerEntered" Click="button5_Click"/>
-        <Button x:Name="button6" Content="Towel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,396,0,0" Height="236" Width="155" PointerEntered="button6_PointerEntered" Click="button6_Click"/>
-        <Button x:Name="button7" Content="Mirror" HorizontalAlignment="Left" VerticalAlignment="Top" Height="104" Width="1270" PointerEntered="button7_PointerEntered" Click="button7_Click"/>
+    <Grid Background="#FF666666">
+        <Button x:Name="button" Content="Toothpaste" HorizontalAlignment="Left" VerticalAlignment="Top" Height="296" RenderTransformOrigin="1.508,1.264" Margin="420,336,0,0" Width="112" PointerEntered="button_PointerEntered" Click="button_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button1" Content="Toothbrush" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="615,336,0,0" Height="296" Width="95" PointerEntered="button1_PointerEntered" Click="button1_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button2" Content="Razor" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.523,4.406" Margin="420,150,0,0" Height="110" Width="302" PointerEntered="button2_PointerEntered" Click="button2_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button3" Content="Hot Tap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="846,178,0,0" Height="125" Width="143" PointerEntered="button3_PointerEntered" Click="button3_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button4" Content="Cold Tap" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1092,178,0,0" Height="125" Width="146" PointerEntered="button4_PointerEntered" Click="button4_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button5" Content="Sink" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="900,379,0,0" Height="209" Width="260" PointerEntered="button5_PointerEntered" Click="button5_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button6" Content="Towel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,396,0,0" Height="236" Width="155" PointerEntered="button6_PointerEntered" Click="button6_Click" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button7" Content="Mirror" HorizontalAlignment="Left" VerticalAlignment="Top" Height="104" Width="1270" PointerEntered="button7_PointerEntered" Click="button7_Click" Opacity="0" IsEnabled="false"/>
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
 
     </Grid>
