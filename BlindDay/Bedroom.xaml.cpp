@@ -554,7 +554,7 @@ void BlindDay::Bedroom::button6_PointerEntered(Platform::Object^ sender, Windows
 	if (pants == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Long. Two trunks. There is my pants.";
+		String^ text = "Long. Two trunks. These are my pants.";
 
 		try
 		{
