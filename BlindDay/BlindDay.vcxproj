@@ -220,9 +220,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\bathroom.wav" />
-    <Media Include="Assets\bird.wav" />
-    <Media Include="Assets\fridge.wav" />
+    <Media Include="Assets\bathroom.mp3" />
+    <Media Include="Assets\bird.mp3" />
+    <Media Include="Assets\fridge.mp3" />
     <Media Include="Assets\intro.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
