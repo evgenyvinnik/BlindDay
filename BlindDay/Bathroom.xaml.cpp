@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "Bathroom.xaml.h"
+#include "Breakfast.xaml.h"
 
 using namespace BlindDay;
 
@@ -783,7 +784,7 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 	}
 	else if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
 	{
-		//this->Frame->Navigate(Breakfast::typeid);
+		this->Frame->Navigate(Breakfast::typeid);
 	}
 }
 
