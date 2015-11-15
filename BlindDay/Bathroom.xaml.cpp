@@ -145,7 +145,7 @@ void BlindDay::Bathroom::button2_PointerEntered(Platform::Object^ sender, Window
 	if (Razor == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Oops! That's my razor. Shaving now would be dangerous!";
+		String^ text = "That's my razor. Shaving now would be dangerous!";
 
 		try
 		{
