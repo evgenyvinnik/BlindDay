@@ -10,7 +10,7 @@
     <Grid Background="#FF666666">
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
         <MediaElement x:Name="MediaPlayer" IsLooping="True" Source="ms-appx:///Assets/bird.mp3"
-                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" />
+                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" Volume="0.6"/>
         <Button x:Name="button" Content="BED" HorizontalAlignment="Left" Margin="0,487,0,-10" VerticalAlignment="Top" Height="243" Width="621" RenderTransformOrigin="0.941,0.305" PointerEntered="button_PointerEntered_1" IsEnabled="false" Opacity="0"/>
         <Button x:Name="button1" Content="Wall" HorizontalAlignment="Left" VerticalAlignment="Top" Height="482" Width="444" PointerEntered="button1_PointerEntered_1" IsEnabled="false" Opacity="0"/>
         <Button x:Name="button2" Content="Shower" HorizontalAlignment="Left" Margin="881,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,0.484" Height="238" Width="399" PointerEntered="button2_PointerEntered_1" IsEnabled="false" Opacity="0"/>
