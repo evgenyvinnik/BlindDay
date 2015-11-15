@@ -1,0 +1,15 @@
+﻿<Page
+    x:Class="BlindDay.TheEnd"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BlindDay"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Grid_Loaded">
+
+    <Grid Background="#FF666666">
+        <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
+        <Button x:Name="button" Content="THE END" HorizontalAlignment="Left" Margin="370,199,0,0" VerticalAlignment="Top" Height="309" Width="573" PointerEntered="button_PointerEntered" Click="button_Click" IsEnabled="false"/>
+
+    </Grid>
+</Page>

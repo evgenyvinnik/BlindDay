@@ -65,6 +65,7 @@
     <Page Include="Bedroom.xaml" />
     <Page Include="Breakfast.xaml" />
     <Page Include="Bathroom.xaml" />
+    <Page Include="TheEnd.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\bathroom.wav">
