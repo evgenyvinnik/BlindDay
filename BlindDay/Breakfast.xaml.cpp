@@ -391,26 +391,7 @@ void BlindDay::Breakfast::button3_Click(Platform::Object^ sender, Windows::UI::X
 {
 	if (milk == 1 && teapot == 1 && tealeaves == 1 && waffles == 1 && toaster == 1 && cup == 1 && brew == 1)
 	{
-		HRESULT hr = S_OK;
-		String^ text = "I think I'll eat now.";
-
-		try
-		{
-			auto speakTask = this->GetSpeechStreamTask(text);
-			speakTask.then([this, text](SpeechSynthesisStream ^speechStream)
-			{
-				// start this audio stream playing
-				this->media->SetSource(speechStream, speechStream->ContentType);
-				this->media->AutoPlay = true;
-				this->media->Play();
-
-			});
-		}
-		catch (Exception ^ex)
-		{
-			hr = ex->HResult;
-
-		}
+		
 		this->Frame->Navigate(TheEnd::typeid);
 	}
 }

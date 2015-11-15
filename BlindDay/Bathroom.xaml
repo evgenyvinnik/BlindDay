@@ -18,6 +18,6 @@
         <Button x:Name="button6" Content="Towel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,396,0,0" Height="236" Width="155" PointerEntered="button6_PointerEntered" Click="button6_Click" Opacity="0" IsEnabled="false"/>
         <Button x:Name="button7" Content="Mirror" HorizontalAlignment="Left" VerticalAlignment="Top" Height="104" Width="1270" PointerEntered="button7_PointerEntered" Click="button7_Click" Opacity="0" IsEnabled="false"/>
         <MediaElement x:Name="MediaPlayer" IsLooping="True" Source="ms-appx:///Assets/bathroom.mp3"
-                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" />
+                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" Volume="0.7" />
     </Grid>
 </Page>

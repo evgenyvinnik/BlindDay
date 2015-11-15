@@ -60,7 +60,7 @@ void BlindDay::TheEnd::media_CurrentStateChanged(Platform::Object^ sender, Windo
 void BlindDay::TheEnd::Grid_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "Thank you for playing the game. Would you like to play again?";
+	String^ text = "I think I'll eat now. Thank you for playing the game. Would you like to play again?";
 
 	try
 	{
@@ -85,7 +85,7 @@ void BlindDay::TheEnd::Grid_Loaded(Platform::Object^ sender, Windows::UI::Xaml::
 void BlindDay::TheEnd::button_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "Restart button. Click to Restart.";
+	String^ text = "Restart button. Click to play again.";
 
 	try
 	{
