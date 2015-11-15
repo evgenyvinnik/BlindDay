@@ -140,6 +140,9 @@
     <ClInclude Include="Bedroom.xaml.h">
       <DependentUpon>Bedroom.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="Breakfast.xaml.h">
+      <DependentUpon>Breakfast.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -153,6 +156,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Bedroom.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Breakfast.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
@@ -180,6 +186,9 @@
     </ClCompile>
     <ClCompile Include="Bedroom.xaml.cpp">
       <DependentUpon>Bedroom.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Breakfast.xaml.cpp">
+      <DependentUpon>Breakfast.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
