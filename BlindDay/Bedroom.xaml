@@ -7,15 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="Page_Loaded">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="button" Content="BED" HorizontalAlignment="Left" Margin="0,487,0,-10" VerticalAlignment="Top" Height="243" Width="621" RenderTransformOrigin="0.941,0.305" PointerEntered="button_PointerEntered_1"/>
+    <Grid Background="#FF666666">
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
-        <Button x:Name="button1" Content="Wall" HorizontalAlignment="Left" VerticalAlignment="Top" Height="482" Width="444" PointerEntered="button1_PointerEntered_1"/>
-        <Button x:Name="button2" Content="Shower" HorizontalAlignment="Left" Margin="881,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,0.484" Height="238" Width="399" PointerEntered="button2_PointerEntered_1"/>
-        <Button x:Name="button3" Content="Right Slipper" HorizontalAlignment="Left" Margin="699,565,0,0" VerticalAlignment="Top" Height="102" Width="123" PointerEntered="button3_PointerEntered" Click="button3_Click"/>
-        <Button x:Name="button4" Content="Left Slipper" HorizontalAlignment="Left" Margin="482,344,0,0" VerticalAlignment="Top" Height="116" Width="153" RenderTransformOrigin="0.535,0.51" PointerEntered="button4_PointerEntered" Click="button4_Click"/>
-        <Button x:Name="button5" Content="T-Shirt" HorizontalAlignment="Left" Margin="699,360,0,0" VerticalAlignment="Top" Height="130" Width="143" PointerEntered="button5_PointerEntered" Click="button5_Click"/>
-        <Button x:Name="button6" Content="Pants" HorizontalAlignment="Left" Margin="993,360,0,0" VerticalAlignment="Top" Height="83" Width="245" PointerEntered="button6_PointerEntered" Click="button6_Click"/>
-        <Button x:Name="button7" Content="Window" HorizontalAlignment="Left" Margin="699,29,0,0" VerticalAlignment="Top" Height="300" Width="539" PointerEntered="button7_PointerEntered"/>
+
+        <Button x:Name="button" Content="BED" HorizontalAlignment="Left" Margin="0,487,0,-10" VerticalAlignment="Top" Height="243" Width="621" RenderTransformOrigin="0.941,0.305" PointerEntered="button_PointerEntered_1" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button1" Content="Wall" HorizontalAlignment="Left" VerticalAlignment="Top" Height="482" Width="444" PointerEntered="button1_PointerEntered_1" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button2" Content="Shower" HorizontalAlignment="Left" Margin="881,482,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.492,0.484" Height="238" Width="399" PointerEntered="button2_PointerEntered_1" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button3" Content="Right Slipper" HorizontalAlignment="Left" Margin="699,565,0,0" VerticalAlignment="Top" Height="102" Width="123" PointerEntered="button3_PointerEntered" Click="button3_Click" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button4" Content="Left Slipper" HorizontalAlignment="Left" Margin="482,344,0,0" VerticalAlignment="Top" Height="116" Width="153" RenderTransformOrigin="0.535,0.51" PointerEntered="button4_PointerEntered" Click="button4_Click" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button5" Content="T-Shirt" HorizontalAlignment="Left" Margin="699,360,0,0" VerticalAlignment="Top" Height="130" Width="143" PointerEntered="button5_PointerEntered" Click="button5_Click" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button6" Content="Pants" HorizontalAlignment="Left" Margin="993,360,0,0" VerticalAlignment="Top" Height="83" Width="245" PointerEntered="button6_PointerEntered" Click="button6_Click" IsEnabled="false" Opacity="0"/>
+        <Button x:Name="button7" Content="Window" HorizontalAlignment="Left" Margin="699,29,0,0" VerticalAlignment="Top" Height="300" Width="539" PointerEntered="button7_PointerEntered" IsEnabled="false" Opacity="0"/>
     </Grid>
 </Page>

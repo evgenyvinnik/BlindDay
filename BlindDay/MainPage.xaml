@@ -8,9 +8,9 @@
     mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="#FF666666">
-        <Button x:Name="button" Content="A BLIND DAY" HorizontalAlignment="Stretch" Margin="0,68,0,0" VerticalAlignment="Top" Click="button_Click" Height="252" Width="1045" PointerEntered="button_PointerEntered" Opacity="0"/>
-        <Button x:Name="button1" Content="START" HorizontalAlignment="Stretch" Margin="327,360,327,0" VerticalAlignment="Top" Click="button1_Click" PointerEntered="button1_PointerEntered" Height="143" Opacity="0"/>
-        <Button x:Name="button2" Content="EXIT" HorizontalAlignment="Stretch" Margin="327,527,327,0" VerticalAlignment="Top" PointerEntered="button2_PointerEntered" Click="button2_Click" Height="143" Opacity="0"/>
+        <Button x:Name="button" Content="A BLIND DAY" HorizontalAlignment="Stretch" Margin="0,68,0,0" VerticalAlignment="Top" Click="button_Click" Height="252" Width="1045" PointerEntered="button_PointerEntered" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button1" Content="START" HorizontalAlignment="Stretch" Margin="327,360,327,0" VerticalAlignment="Top" Click="button1_Click" PointerEntered="button1_PointerEntered" Height="143" Opacity="0" IsEnabled="false"/>
+        <Button x:Name="button2" Content="EXIT" HorizontalAlignment="Stretch" Margin="327,527,327,0" VerticalAlignment="Top" PointerEntered="button2_PointerEntered" Click="button2_Click" Height="143" Opacity="0" IsEnabled="false"/>
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
     </Grid>
 </Page>
