@@ -8,6 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded">
+        <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
+        <Button x:Name="button" Content="Freezer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="236" Width="366" PointerEntered="button_PointerEntered" Click="button_Click"/>
+        <Button x:Name="button1" Content="Toaster" HorizontalAlignment="Left" Margin="452,289,0,0" VerticalAlignment="Top" Height="128" Width="199" PointerEntered="button1_PointerEntered" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Fridge" HorizontalAlignment="Left" Margin="0,294,0,0" VerticalAlignment="Top" Height="426" Width="366" PointerEntered="button2_PointerEntered" Click="button2_Click"/>
+        <Button x:Name="button3" Content="Table" HorizontalAlignment="Left" Margin="452,478,0,0" VerticalAlignment="Top" Height="242" Width="828" PointerEntered="button3_PointerEntered" Click="button3_Click"/>
+        <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="button5" Content="Cup" HorizontalAlignment="Left" Margin="452,44,0,0" VerticalAlignment="Top" Height="192" Width="189" PointerEntered="button5_PointerEntered" Click="button5_Click"/>
+        <Button x:Name="button6" Content="Tea Leaves" HorizontalAlignment="Left" Margin="998,44,0,0" VerticalAlignment="Top" Height="164" Width="241" PointerEntered="button6_PointerEntered" Click="button6_Click"/>
+        <Button x:Name="button7" Content="Tea Pot" HorizontalAlignment="Left" Margin="998,294,0,0" VerticalAlignment="Top" Height="152" Width="249" PointerEntered="button7_PointerEntered" Click="button7_Click"/>
+        <Button x:Name="button8" Content="Sink" HorizontalAlignment="Left" Margin="698,55,0,0" VerticalAlignment="Top" Height="349" Width="239" PointerEntered="button8_PointerEntered" Click="button8_Click"/>
 
     </Grid>
 </Page>
