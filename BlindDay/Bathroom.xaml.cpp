@@ -75,9 +75,15 @@ void BlindDay::Bathroom::media_CurrentStateChanged(Platform::Object^ sender, Win
 			this->button5->IsEnabled = true;
 			this->button6->IsEnabled = true;
 			this->button7->IsEnabled = true;
+
+			if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+			{
+				this->Frame->Navigate(Breakfast::typeid);
+			}
 		}
 
 }
+
 void BlindDay::Bathroom::button_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	if (Toothpaste == 0)
@@ -111,7 +117,7 @@ void BlindDay::Bathroom::button1_PointerEntered(Platform::Object^ sender, Window
 	if (Toothbrush == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Toothbrush, toothepaste, and water at the sink is all I need in here";
+		String^ text = "Toothbrush is here";
 
 		try
 		{
@@ -139,7 +145,7 @@ void BlindDay::Bathroom::button2_PointerEntered(Platform::Object^ sender, Window
 	if (Razor == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "Razor, should not be used now!";
+		String^ text = "Oops! That's my razor. Shaving now would be dangerous!";
 
 		try
 		{
@@ -719,10 +725,7 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 	String^ third_touch = "I found nothing useful in the sink.";
 	if (Sink == 0)
 	{
-		if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
-		{
-			this->Frame->Navigate(Breakfast::typeid);
-		}
+
 		HRESULT hr = S_OK;
 		try
 		{
@@ -733,7 +736,6 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 				this->media->SetSource(speechStream, speechStream->ContentType);
 				this->media->AutoPlay = true;
 				this->media->Play();
-
 			});
 		}
 		catch (Exception ^ex)
@@ -747,10 +749,10 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 
 	else if (Sink == 1)
 	{
-		if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1)
+		/*if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1)
 		{
 			this->Frame->Navigate(Breakfast::typeid);
-		}
+		}*/
 
 		HRESULT hr = S_OK;
 
@@ -777,10 +779,10 @@ void BlindDay::Bathroom::button5_Click(Platform::Object^ sender, Windows::UI::Xa
 
 	else if (Sink >= 2)
 	{
-		 if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
+		/*if (Toothpaste >= 1 && Toothpaste >= 1 && Hot_tap >= 1 && Cold_tap >= 1 && Sink >= 1)
 	    {
 		    this->Frame->Navigate(Breakfast::typeid);
-		}
+		}*/
 
 		HRESULT hr = S_OK;
 

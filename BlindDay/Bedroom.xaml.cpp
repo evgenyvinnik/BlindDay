@@ -638,7 +638,7 @@ void BlindDay::Bedroom::button4_Click(Platform::Object^ sender, Windows::UI::Xam
 	{
 
 		HRESULT hr = S_OK;
-		String^ text = "I'll put on my left sock.";
+		String^ text = "Putting on my left sock.";
 
 		try
 		{
@@ -669,7 +669,7 @@ void BlindDay::Bedroom::button5_Click(Platform::Object^ sender, Windows::UI::Xam
 	{
 
 		HRESULT hr = S_OK;
-		String^ text = "I'll put on my tshirt.";
+		String^ text = "Ok, let's put on my tshirt.";
 
 		try
 		{
@@ -700,7 +700,7 @@ void BlindDay::Bedroom::button6_Click(Platform::Object^ sender, Windows::UI::Xam
 	{
 
 		HRESULT hr = S_OK;
-		String^ text = "I'll put on my pants.";
+		String^ text = "Now I have my pants on.";
 
 		try
 		{
