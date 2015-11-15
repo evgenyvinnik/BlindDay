@@ -9,7 +9,14 @@
 
     <Grid Background="#FF666666">
         <MediaElement Grid.Row="0" x:Name="media" AutoPlay="False" CurrentStateChanged="media_CurrentStateChanged"/>
-        <Button x:Name="button" Content="THE END" HorizontalAlignment="Left" Margin="370,199,0,0" VerticalAlignment="Top" Height="309" Width="573" PointerEntered="button_PointerEntered" Click="button_Click" IsEnabled="false"/>
-
+        <Button x:Name="button" Content="THE END" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="309" Width="573" PointerEntered="button_PointerEntered" Click="button_Click" IsEnabled="false">
+        <Button.Template>
+            <ControlTemplate>
+                    <Image Source="ms-appx:///Assets/startagain.png"/>
+            </ControlTemplate>
+        </Button.Template>
+        </Button>
+        <MediaElement x:Name="MediaPlayer" IsLooping="True" Source="ms-appx:///Assets/intro.mp3"
+                                     AudioCategory="BackgroundCapableMedia" AutoPlay="True" />
     </Grid>
 </Page>

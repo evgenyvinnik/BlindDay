@@ -19,6 +19,7 @@
     <ClCompile Include="Bedroom.xaml.cpp" />
     <ClCompile Include="Breakfast.xaml.cpp" />
     <ClCompile Include="Bathroom.xaml.cpp" />
+    <ClCompile Include="TheEnd.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -27,6 +28,7 @@
     <ClInclude Include="Bedroom.xaml.h" />
     <ClInclude Include="Breakfast.xaml.h" />
     <ClInclude Include="Bathroom.xaml.h" />
+    <ClInclude Include="TheEnd.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -50,7 +52,7 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
-    <Image Include="Assets\start again.png">
+    <Image Include="Assets\startagain.png">
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>

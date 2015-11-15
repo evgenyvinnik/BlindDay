@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "TheEnd.xaml.h"
+#include "MainPage.xaml.h"
 
 using namespace BlindDay;
 
@@ -108,5 +109,5 @@ void BlindDay::TheEnd::button_PointerEntered(Platform::Object^ sender, Windows::
 
 void BlindDay::TheEnd::button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	App::Current->Exit();
+	this->Frame->Navigate(MainPage::typeid);
 }
