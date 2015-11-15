@@ -365,7 +365,7 @@ void BlindDay::Breakfast::button2_Click(Platform::Object^ sender, Windows::UI::X
 void BlindDay::Breakfast::button3_PointerEntered(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)
 {
 	HRESULT hr = S_OK;
-	String^ text = "This is the dinning table. I can eat here after I get my waffles and milk tea.";
+	String^ text = "This is the dinning table. I can eat here after I get my waffles and make milk tea.";
 
 	try
 	{
