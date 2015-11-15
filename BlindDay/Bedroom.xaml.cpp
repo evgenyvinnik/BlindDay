@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "Bedroom.xaml.h"
+#include "Bathroom.xaml.h"
 
 using namespace BlindDay;
 
@@ -459,7 +460,7 @@ void BlindDay::Bedroom::button2_PointerEntered_1(Platform::Object^ sender, Windo
 
 	else
 	{
-		//this is where we will nagivate to the washroom
+		this->Frame->Navigate(Bathroom::typeid);
 	}
 }
 
