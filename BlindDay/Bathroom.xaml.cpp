@@ -227,7 +227,7 @@ void BlindDay::Bathroom::button5_PointerEntered(Platform::Object^ sender, Window
 	if (Sink == 0)
 	{
 		HRESULT hr = S_OK;
-		String^ text = "I need to brush my teeth, I need toothpaste, toothbrush, hot water tap, and cold water tap.";
+		String^ text = "I need to brush my teeth, I need toothpaste, toothbrush, hot water tap, cold water tap, and wash it up at the sink.";
 		try
 		{
 			auto speakTask = this->GetSpeechStreamTask(text);
