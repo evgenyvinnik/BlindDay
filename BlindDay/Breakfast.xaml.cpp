@@ -5,6 +5,7 @@
 
 #include "pch.h"
 #include "Breakfast.xaml.h"
+#include "TheEnd.xaml.h"
 
 using namespace BlindDay;
 
@@ -410,7 +411,7 @@ void BlindDay::Breakfast::button3_Click(Platform::Object^ sender, Windows::UI::X
 			hr = ex->HResult;
 
 		}
-		App::Current->Exit();
+		this->Frame->Navigate(TheEnd::typeid);
 	}
 }
 
